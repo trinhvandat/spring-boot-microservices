@@ -1,0 +1,7 @@
+test:
+  message: hello test message from leonard
+
+eureka:
+  client:
+  service-url:
+  default-zone: http://localhost:8761
