@@ -17,6 +17,8 @@
 		<module>greeting-service</module>
 		<module>api-gateway</module>
 		<module>discovery-service</module>
+        <module>scheduler</module>
+		<module>scheduler/quartz-greeting</module>
 	</modules>
 
 	<properties>
