@@ -1,11 +1,33 @@
 server:
   port: 8888
 
+
 spring:
-  profiles:
-    active: native
   cloud:
     config:
       server:
-        native:
-          searchLocations: classpath:/config
+        jdbc:
+          defaultLabel: latest
+  profiles:
+    active: jdbc
+
+  sql:
+    init:
+      mode: always
+
+  datasource:
+    url: jdbc:h2:mem:config-server
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    defer-datasource-initialization: true
+
+
+  h2:
+    console:
+      enabled: true
