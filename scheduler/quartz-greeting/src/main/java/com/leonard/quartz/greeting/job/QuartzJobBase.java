@@ -11,6 +11,7 @@ public abstract class QuartzJobBase implements Job {
   public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
     log.info("=== Start execute job [{}]", jobExecutionContext.getJobDetail().getKey());
     executeLogic(jobExecutionContext);
+    // push queue 1 jobId
   }
 
   protected abstract void executeLogic(JobExecutionContext jobExecutionContext) throws JobExecutionException;
