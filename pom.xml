@@ -20,6 +20,7 @@
         <module>config-server</module>
         <module>scheduler</module>
 		<module>scheduler/quartz-greeting</module>
+		<module>core</module>
 	</modules>
 
 	<properties>
@@ -53,6 +54,12 @@
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-starter-gateway</artifactId>
 				<version>4.0.5</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.leonard</groupId>
+				<artifactId>core-exception</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
